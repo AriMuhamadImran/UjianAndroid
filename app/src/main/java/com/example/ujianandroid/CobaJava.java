@@ -1,2 +1,4 @@
-package com.example.ujianandroid;public class CobaJava {
+package com.example.ujianandroid;
+
+public class CobaJava {
 }
