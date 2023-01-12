@@ -4,8 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BDF8C7"
+    android:background="#F8DDBD"
     tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edUmur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="#373030"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:phoneNumber="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnSimpan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView"
@@ -38,8 +56,8 @@
         android:id="@+id/edNamaDepan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:background="@color/white"
+        android:layout_marginBottom="20dp"
+        android:background="#403636"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -47,7 +65,7 @@
         android:paddingEnd="3dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -55,8 +73,8 @@
         android:id="@+id/edNamaBelakang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:background="@color/white"
+        android:layout_marginBottom="152dp"
+        android:background="#4A4040"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -64,7 +82,7 @@
         android:paddingEnd="3dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSimpan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -72,11 +90,24 @@
         android:id="@+id/btnSimpan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="256dp"
         android:backgroundTint="@color/design_default_color_error"
         android:text="Simpan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="58dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="32dp"
+        android:text="Umur"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edNamaBelakang" />
 </androidx.constraintlayout.widget.ConstraintLayout>
