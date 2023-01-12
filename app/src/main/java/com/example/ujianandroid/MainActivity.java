@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         EditText edNamaDepan = (EditText) findViewById(R.id.edNamaDepan);
         EditText edNamaBelakang = (EditText) findViewById(R.id.edNamaBelakang);
-        EditText edUmur = (EditText) findViewById(R.id.edUmur) ;
+        EditText edUmur = (EditText) findViewById(R.id.edUmur);
         Button btnSimpan = (Button) findViewById(R.id.btnSimpan);
 
         ArrayList<String> daftar_nama = new ArrayList<>();
@@ -33,25 +33,25 @@ public class MainActivity extends AppCompatActivity {
                 String isian_nama_depan = edNamaDepan.getText().toString();
                 String isian_nama_belakang = edNamaBelakang.getText().toString();
                 String isian_umur = edUmur.getText().toString();
+
                 if(isian_nama_depan.isEmpty() && isian_nama_belakang.isEmpty() && isian_umur.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Isian masih kosong", Toast.LENGTH_SHORT).show();
-                } else {
+                }else {
                     Integer counter = Integer.valueOf(isian_umur);
-                    String nama_lengkap = isian_nama_depan.concat(" ").concat(isian_nama_belakang);
+                    String nama_lengkap = isian_nama_depan.concat(" ").concat(isian_nama_belakang).concat(", ").concat("Status : ");
                     daftar_nama.clear();
-                    for (Integer i = 1; 1 <= counter; i++) {
-                        if (counter >= 1 && counter <= 10) {
-                            daftar_nama.add(i + " " + nama_lengkap.concat("Anak"));
-                        } else if (counter >= 11 && counter <= 20) {
-                            daftar_nama.add(i + " " + nama_lengkap.concat("Remaja"));
-                        } else if (counter >= 21 && counter <= 40) {
-                            daftar_nama.add(i + " " + nama_lengkap.concat("Dewasa"));
+                    for(Integer i = 1; i <= counter; i++) {
+                        if(counter >= 1 && counter <= 10) {
+                            daftar_nama.add( i + " " +  nama_lengkap.concat("Anak"));
+                        } else if(counter >= 11 && counter <= 20) {
+                            daftar_nama.add( i + " " +  nama_lengkap.concat("Remaja"));
+                        } else if(counter >= 21 && counter <= 40) {
+                            daftar_nama.add( i + " " +  nama_lengkap.concat("Dewasa"));
                         } else {
-                            daftar_nama.add(i + "" + nama_lengkap.concat("Tua"));
+                            daftar_nama.add( i + " " +  nama_lengkap.concat("Tua"));
                         }
                         edNamaDepan.setText("");
                         edNamaBelakang.setText("");
-                        edUmur.setText("");
                         intent_list.putStringArrayListExtra("daftar_nama", daftar_nama);
                         startActivity(intent_list);
                     }
